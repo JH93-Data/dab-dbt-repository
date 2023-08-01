@@ -1,5 +1,18 @@
 
 
+
+
+
+
+
+
+
+{{
+  config(
+    materialized='table'
+  )
+}}
+
 SELECT
   ### Key ###  
   product_id
@@ -13,11 +26,8 @@ GROUP BY product_id
 
 
 
-{{
-  config(
-    materialized='table'
-  )
-}}
+
+
 
 
 
