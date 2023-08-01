@@ -13,5 +13,14 @@ GROUP BY product_id
 
 
 
+{{
+  config(
+    materialized='table'
+  )
+}}
+
+
+
+
 
 
