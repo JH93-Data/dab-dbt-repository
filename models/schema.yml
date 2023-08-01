@@ -3,15 +3,17 @@
 version: 2
 
 models:
-  - name: cc_sales_products
+  - name: cc_stock
     columns:
       ### PK ###
-      - name: qty_91 
+      - name: product_id
         tests:
           - not_null
-      ### PK ###
-      - name: avg_daily_qty_91
+          - unique
+      - name: product_name
         tests:
           - not_null
-              
-
+      - name: model_type
+        tests:
+          - accepted_values:
+                values: ["T-shirt", "Short", "Legging", "Crop-top", "Top", "Accessories"]
